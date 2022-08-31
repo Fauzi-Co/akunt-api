@@ -21,5 +21,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/transaction', [TransactionController::class, 'index']);
+Route::get('/transaction/{id}', [TransactionController::class, 'show']);
 Route::post('/transaction', [TransactionController::class, 'store']);
+Route::put('/transaction/{id}', [TransactionController::class, 'update']);
+Route::delete('/transaction/{id}', [TransactionController::class, 'destroy']);
+
 // Route::resource('/transaction', TransactionController::class);
